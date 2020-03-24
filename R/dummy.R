@@ -78,7 +78,7 @@ dummy <- function( x, data=NULL, sep="", drop=TRUE, fun=as.integer, verbose = FA
 
 
   # GET THE MODEL MATRIX   
-    mm <- model.matrix( ~ x - 1, model.frame( ~ x - 1 ),  contrasts=FALSE )  # vec
+    mm <- model.matrix( ~ x - 1, model.frame( ~ x - 1 ) )  # vec
     colnames.mm <- colnames(mm) 
 
     if( verbose ) cat( " ", name, ":", ncol(mm), "dummy varibles created\n" ) 
